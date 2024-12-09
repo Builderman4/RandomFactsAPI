@@ -19,6 +19,25 @@ class ViewController: UIViewController {
     @IBAction func fetchNewFact(_ sender: UIButton) {
         fetchData() 
     }
+    
+    struct Fact: Codable {
+        let text: String
+        let id: String
+        let source: String
+        let sourceUrl: String
+        let language: String
+        let permalink: String
+        
+        enum CodingKeys: String, CodingKey {
+            case id
+            case text
+            case source
+            case sourceUrl = "source_url"
+            case language
+            case permalink
+        }
+        
+    }
 
     func fetchData() {
         let apiUrlString = "https://uselessfacts.jsph.pl/random.json?language=en"
@@ -40,13 +59,24 @@ class ViewController: UIViewController {
 
             if let data = data {
                 do {
-                    if let jsonObject = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                       let fact = jsonObject["text"] as? String {
-                        self.updateTextView(text: fact)
-                    } else {
-                        self.updateTextView(text: "Error parsing fact")
-                    }
+                 
+                    let fact = try JSONDecoder().decode(Fact.self, from: data)
+                    
+                    print("Fetched Fact: \(fact.text)")
+                    print("Fact ID: \(fact.id)")
+                    print("Source: \(fact.source)")
+                    print("Source URL: \(fact.sourceUrl)")
+                    print("Language: \(fact.language)")
+                    print("Permalink: \(fact.permalink)")
+                    
+                    
+                    self.updateTextView(text: """
+                Fact: \(fact.text)
+                Source: \(fact.source)
+                Source URL: \(fact.sourceUrl)
+                """)
                 } catch {
+                    print("Error parsing JSON: \(error.localizedDescription)")
                     self.updateTextView(text: "Error parsing JSON: \(error.localizedDescription)")
                 }
             }
