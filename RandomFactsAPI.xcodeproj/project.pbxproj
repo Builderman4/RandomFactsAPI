@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B8EB0012D0E816B0054619E /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8EB0002D0E816B0054619E /* Fact.swift */; };
+		0B8EB0032D0E84600054619E /* UnsplashResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8EB0022D0E84600054619E /* UnsplashResponse.swift */; };
 		0BE2A9A82CFD6BE800133E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2A9A72CFD6BE800133E54 /* AppDelegate.swift */; };
 		0BE2A9AA2CFD6BE800133E54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2A9A92CFD6BE800133E54 /* SceneDelegate.swift */; };
 		0BE2A9AC2CFD6BE800133E54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2A9AB2CFD6BE800133E54 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B8EB0002D0E816B0054619E /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		0B8EB0022D0E84600054619E /* UnsplashResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashResponse.swift; sourceTree = "<group>"; };
 		0BE2A9A42CFD6BE800133E54 /* RandomFactsAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomFactsAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE2A9A72CFD6BE800133E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE2A9A92CFD6BE800133E54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				0BE2A9A72CFD6BE800133E54 /* AppDelegate.swift */,
 				0BE2A9A92CFD6BE800133E54 /* SceneDelegate.swift */,
 				0BE2A9AB2CFD6BE800133E54 /* ViewController.swift */,
+				0B8EB0022D0E84600054619E /* UnsplashResponse.swift */,
+				0B8EB0002D0E816B0054619E /* Fact.swift */,
 				0BE2A9AD2CFD6BE800133E54 /* Main.storyboard */,
 				0BE2A9B02CFD6BEA00133E54 /* Assets.xcassets */,
 				0BE2A9B22CFD6BEA00133E54 /* LaunchScreen.storyboard */,
@@ -141,6 +147,8 @@
 				0BE2A9AC2CFD6BE800133E54 /* ViewController.swift in Sources */,
 				0BE2A9A82CFD6BE800133E54 /* AppDelegate.swift in Sources */,
 				0BE2A9AA2CFD6BE800133E54 /* SceneDelegate.swift in Sources */,
+				0B8EB0012D0E816B0054619E /* Fact.swift in Sources */,
+				0B8EB0032D0E84600054619E /* UnsplashResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
